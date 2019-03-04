@@ -27,18 +27,18 @@ BOARD_USES_HC_RADIO := true
 
 TARGET_NO_BOOTLOADER := true
 
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_ABI2 := arm64-v8a,armeabi-v7a,armeabi
 TARGET_CPU_SMP := true
-TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_ARCH_VARIANT := arm64-v8-a-neon
 ARCH_ARM_HAVE_VFP := true
-TARGET_ARCH_VARIANT_CPU := cortex-a9
+TARGET_ARCH_VARIANT_CPU := cortex-a53
 TARGET_ARCH_VARIANT_FPU := neon
 ARCH_ARM_HAVE_NEON := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 ARCH_ARM_HAVE_ARMV7A := true
-TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a53 -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a53 -mfpu=neon -mfloat-abi=softfp
 
 BOARD_KERNEL_BASE := 0x60400000
 BOARD_KERNEL_CMDLINE := 
@@ -48,12 +48,12 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := rk30sdk
 TARGET_BOOTLOADER_BOARD_NAME := rk30board
 
-BOARD_EGL_CFG := device/yuandao/n70/egl.cfg
+BOARD_EGL_CFG := device/teclast/p10/egl.cfg
 USE_OPENGL_RENDERER := true
 ENABLE_WEBGL := true
 BOARD_USE_SKIA_LCDTEXT := true
 
-TARGET_RECOVERY_INITRC := device/yuandao/n70/recovery.init.rc
+TARGET_RECOVERY_INITRC := device/teclast/p10/recovery.init.rc
 TARGET_RECOVERY_PRE_COMMAND := "busybox dd if=/misc.img of=/dev/block/mtdblock0; sync"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
@@ -82,10 +82,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1572864000
 
 TARGET_PROVIDES_INIT_RC := true
 
-TARGET_PREBUILT_KERNEL := device/yuandao/n70/kernel
+TARGET_PREBUILT_KERNEL := device/teclast/p10/kernel
 
 TARGET_BOOTANIMATION_PRELOAD := true
 
 BOARD_HAVE_BLUETOOTH := false
 
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/yuandao/n70/releasetools/n70_ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/teclast/p10/releasetools/p10_ota_from_target_files
